@@ -1,0 +1,538 @@
+<form action="/cart/add" method="post" enctype="multipart/form-data">
+    <!-- Product ID hidden field -->
+    <input type="hidden" name="id" value="{{ product.variants.first.id }}"> 
+ <div class="product-options">
+  <!-- Select Your Front Background Color -->
+  <label>Select Your Front Background Color:</label>
+  <div class="color-options">
+   <input type="radio" id="front-background-color-white" name="properties[ Front Background Color]" value="White" required>
+      <label for="front-background-color-white" style="background-color: #FFFFFF;" class="color-swatch" title="White"></label>
+  
+      <input type="radio" id="front-background-color-ecru" name="properties[ Front Background Color]" value="Ecru">
+      <label for="front-background-color-ecru" style="background-color: #F5F5DC;" class="color-swatch" title="Ecru"></label>
+  
+      <input type="radio" id="front-background-color-light-pink" name="properties[ Front Background Color]" value="Light Pink">
+      <label for="front-background-color-light-pink" style="background-color: #F9C4CF;" class="color-swatch" title="Light Pink"></label>
+  
+      <input type="radio" id="front-background-color-bright-pink" name="properties[ Front Background Color]" value="Bright Pink">
+      <label for="front-background-color-bright-pink" style="background-color: #FF69B4;" class="color-swatch" title="Bright Pink"></label>
+  
+      <input type="radio" id="front-background-color-fuchsia" name="properties[ Front Background Color]" value="Fuchsia">
+      <label for="front-background-color-fuchsia" style="background-color: #FF00FF;" class="color-swatch" title="Fuchsia"></label>
+  
+      <input type="radio" id="front-background-color-baby-blue" name="properties[ Front Background Color]" value="Baby Blue">
+      <label for="front-background-color-baby-blue" style="background-color: #89CFF0;" class="color-swatch" title="Baby Blue"></label>
+  
+      <input type="radio" id="front-background-color-denim-blue" name="properties[ Front Background Color]" value="Denim Blue">
+      <label for="front-background-color-denim-blue" style="background-color: #3F69AA;" class="color-swatch" title="Denim Blue"></label>
+  
+      <input type="radio" id="front-background-color-navy-blue" name="properties[ Front Background Color]" value="Navy Blue">
+      <label for="front-background-color-navy-blue" style="background-color: #000080;" class="color-swatch" title="Navy Blue"></label>
+  
+      <input type="radio" id="front-background-color-royal-blue" name="properties[ Front Background Color]" value="Royal Blue">
+      <label for="front-background-color-royal-blue" style="background-color: #4169E1;" class="color-swatch" title="Royal Blue"></label>
+  
+      <input type="radio" id="front-background-color-turquoise" name="properties[ Front Background Color]" value="Turquoise">
+      <label for="front-background-color-turquoise" style="background-color: #40E0D0;" class="color-swatch" title="Turquoise"></label>
+  
+      <input type="radio" id="front-background-color-lavender" name="properties[ Front Background Color]" value="Lavender">
+      <label for="front-background-color-lavender" style="background-color: #E6E6FA;" class="color-swatch" title="Lavender"></label>
+  
+      <input type="radio" id="front-background-color-purple" name="properties[ Front Background Color]" value="Purple">
+      <label for="front-background-color-purple" style="background-color: #800080;" class="color-swatch" title="Purple"></label>
+  
+      <input type="radio" id="front-background-color-hunter-green" name="properties[ Front Background Color]" value="Hunter Green">
+      <label for="front-background-color-hunter-green" style="background-color: #355E3B;" class="color-swatch" title="Hunter Green"></label>
+  
+      <input type="radio" id="front-background-color-kelly-green" name="properties[ Front Background Color]" value="Kelly Green">
+      <label for="front-background-color-kelly-green" style="background-color: #4CBB17;" class="color-swatch" title="Kelly Green"></label>
+  
+      <input type="radio" id="front-background-color-lime-green" name="properties[ Front Background Color]" value="Lime Green">
+      <label for="front-background-color-lime-green" style="background-color: #32CD32;" class="color-swatch" title="Lime Green"></label>
+  
+      <input type="radio" id="front-background-color-bright-yellow" name="properties[ Front Background Color]" value="Bright Yellow">
+      <label for="front-background-color-bright-yellow" style="background-color: #FFFF00;" class="color-swatch" title="Bright Yellow"></label>
+  
+      <input type="radio" id="front-background-color-orange" name="properties[ Front Background Color]" value="Orange">
+      <label for="front-background-color-orange" style="background-color: #FFA500;" class="color-swatch" title="Orange"></label>
+  
+      <input type="radio" id="front-background-color-red" name="properties[ Front Background Color]" value="Red">
+      <label for="front-background-color-red" style="background-color: #FF0000;" class="color-swatch" title="Red"></label>
+  
+      <input type="radio" id="front-background-color-gray" name="properties[ Front Background Color]" value="Gray">
+      <label for="front-background-color-gray" style="background-color: #808080;" class="color-swatch" title="Gray"></label>
+  
+      <input type="radio" id="front-background-color-silver" name="properties[ Front Background Color]" value="Silver">
+      <label for="front-background-color-silver" style="background-color: #C0C0C0;" class="color-swatch" title="Silver"></label>
+  
+      <input type="radio" id="front-background-color-light-brown" name="properties[ Front Background Color]" value="Light Brown">
+      <label for="front-background-color-light-brown" style="background-color: #A52A2A;" class="color-swatch" title="Light Brown"></label>
+  
+      <input type="radio" id="front-background-color-dark-brown" name="properties[ Front Background Color]" value="Dark Brown">
+      <label for="front-background-color-dark-brown" style="background-color: #5C4033;" class="color-swatch" title="Dark Brown"></label>
+  
+      <input type="radio" id="front-background-color-black" name="properties[ Front Background Color]" value="Black">
+      <label for="front-background-color-black" style="background-color: #000000;" class="color-swatch" title="Black"></label>
+    </div>
+
+    <!-- Add more colors as needed -->
+  </div>
+
+  <!-- Name on Blanket -->
+  <label for="name-on-blanket">Name on Blanket:</label>
+  <input type="text" id="name-on-blanket" name="properties[Name on Blanket]" placeholder="Enter name" required>
+
+  <!-- Select Your Name Color -->
+  <label>Select Your Name Color:</label>
+  <div class="color-options">
+   <input type="radio" id="name-color-white" name="properties[ Name Color]" value="White" required>
+      <label for="name-color-white" style="background-color: #FFFFFF;" class="color-swatch" title="White"></label>
+  
+      <input type="radio" id="name-color-ecru" name="properties[ Name Color]" value="Ecru">
+      <label for="name-color-ecru" style="background-color: #F5F5DC;" class="color-swatch" title="Ecru"></label>
+  
+      <input type="radio" id="name-color-light-pink" name="properties[ Name Color]" value="Light Pink">
+      <label for="name-color-light-pink" style="background-color: #F9C4CF;" class="color-swatch" title="Light Pink"></label>
+  
+      <input type="radio" id="name-color-bright-pink" name="properties[ Name Color]" value="Bright Pink">
+      <label for="name-color-bright-pink" style="background-color: #FF69B4;" class="color-swatch" title="Bright Pink"></label>
+  
+      <input type="radio" id="name-color-fuchsia" name="properties[ Name Color]" value="Fuchsia">
+      <label for="name-color-fuchsia" style="background-color: #FF00FF;" class="color-swatch" title="Fuchsia"></label>
+  
+      <input type="radio" id="name-color-baby-blue" name="properties[ Name Color]" value="Baby Blue">
+      <label for="name-color-baby-blue" style="background-color: #89CFF0;" class="color-swatch" title="Baby Blue"></label>
+  
+      <input type="radio" id="name-color-denim-blue" name="properties[ Name Color]" value="Denim Blue">
+      <label for="name-color-denim-blue" style="background-color: #3F69AA;" class="color-swatch" title="Denim Blue"></label>
+  
+      <input type="radio" id="name-color-navy-blue" name="properties[ Name Color]" value="Navy Blue">
+      <label for="name-color-navy-blue" style="background-color: #000080;" class="color-swatch" title="Navy Blue"></label>
+  
+      <input type="radio" id="name-color-royal-blue" name="properties[ Name Color]" value="Royal Blue">
+      <label for="name-color-royal-blue" style="background-color: #4169E1;" class="color-swatch" title="Royal Blue"></label>
+  
+      <input type="radio" id="name-color-turquoise" name="properties[ Name Color]" value="Turquoise">
+      <label for="name-color-turquoise" style="background-color: #40E0D0;" class="color-swatch" title="Turquoise"></label>
+  
+      <input type="radio" id="name-color-lavender" name="properties[ Name Color]" value="Lavender">
+      <label for="name-color-lavender" style="background-color: #E6E6FA;" class="color-swatch" title="Lavender"></label>
+  
+      <input type="radio" id="name-color-purple" name="properties[ Name Color]" value="Purple">
+      <label for="name-color-purple" style="background-color: #800080;" class="color-swatch" title="Purple"></label>
+  
+      <input type="radio" id="name-color-hunter-green" name="properties[ Name Color]" value="Hunter Green">
+      <label for="name-color-hunter-green" style="background-color: #355E3B;" class="color-swatch" title="Hunter Green"></label>
+  
+      <input type="radio" id="name-color-kelly-green" name="properties[ Name Color]" value="Kelly Green">
+      <label for="name-color-kelly-green" style="background-color: #4CBB17;" class="color-swatch" title="Kelly Green"></label>
+  
+      <input type="radio" id="name-color-lime-green" name="properties[ Name Color]" value="Lime Green">
+      <label for="name-color-lime-green" style="background-color: #32CD32;" class="color-swatch" title="Lime Green"></label>
+  
+      <input type="radio" id="name-color-bright-yellow" name="properties[ Name Color]" value="Bright Yellow">
+      <label for="name-color-bright-yellow" style="background-color: #FFFF00;" class="color-swatch" title="Bright Yellow"></label>
+  
+      <input type="radio" id="name-color-orange" name="properties[ Name Color]" value="Orange">
+      <label for="name-color-orange" style="background-color: #FFA500;" class="color-swatch" title="Orange"></label>
+  
+      <input type="radio" id="name-color-red" name="properties[ Name Color]" value="Red">
+      <label for="name-color-red" style="background-color: #FF0000;" class="color-swatch" title="Red"></label>
+  
+      <input type="radio" id="name-color-gray" name="properties[ Name Color]" value="Gray">
+      <label for="name-color-gray" style="background-color: #808080;" class="color-swatch" title="Gray"></label>
+  
+      <input type="radio" id="name-color-silver" name="properties[ Name Color]" value="Silver">
+      <label for="name-color-silver" style="background-color: #C0C0C0;" class="color-swatch" title="Silver"></label>
+  
+      <input type="radio" id="name-color-light-brown" name="properties[ Name Color]" value="Light Brown">
+      <label for="name-color-light-brown" style="background-color: #A52A2A;" class="color-swatch" title="Light Brown"></label>
+  
+      <input type="radio" id="name-color-dark-brown" name="properties[ Name Color]" value="Dark Brown">
+      <label for="name-color-dark-brown" style="background-color: #5C4033;" class="color-swatch" title="Dark Brown"></label>
+  
+      <input type="radio" id="name-color-black" name="properties[ Name Color]" value="Black">
+      <label for="name-color-black" style="background-color: #000000;" class="color-swatch" title="Black"></label>
+    </div>
+
+    <!-- Add more colors as needed -->
+  </div>
+
+  <!-- Select Design Above Name Color -->
+  <label>Select Design Above Name Color:</label>
+  <div class="color-options">
+   <input type="radio" id="design-above-name-color-white" name="properties[ Design Above Name Color]" value="White" required>
+      <label for="design-above-name-color-white" style="background-color: #FFFFFF;" class="color-swatch" title="White"></label>
+  
+      <input type="radio" id="design-above-name-color-ecru" name="properties[ Design Above Name Color]" value="Ecru">
+      <label for="design-above-name-color-ecru" style="background-color: #F5F5DC;" class="color-swatch" title="Ecru"></label>
+  
+      <input type="radio" id="design-above-name-color-light-pink" name="properties[ Design Above Name Color]" value="Light Pink">
+      <label for="design-above-name-color-light-pink" style="background-color: #F9C4CF;" class="color-swatch" title="Light Pink"></label>
+  
+      <input type="radio" id="design-above-name-color-bright-pink" name="properties[ Design Above Name Color]" value="Bright Pink">
+      <label for="design-above-name-color-bright-pink" style="background-color: #FF69B4;" class="color-swatch" title="Bright Pink"></label>
+  
+      <input type="radio" id="design-above-name-color-fuchsia" name="properties[ Design Above Name Color]" value="Fuchsia">
+      <label for="design-above-name-color-fuchsia" style="background-color: #FF00FF;" class="color-swatch" title="Fuchsia"></label>
+  
+      <input type="radio" id="design-above-name-color-baby-blue" name="properties[ Design Above Name Color]" value="Baby Blue">
+      <label for="design-above-name-color-baby-blue" style="background-color: #89CFF0;" class="color-swatch" title="Baby Blue"></label>
+  
+      <input type="radio" id="design-above-name-color-denim-blue" name="properties[ Design Above Name Color]" value="Denim Blue">
+      <label for="design-above-name-color-denim-blue" style="background-color: #3F69AA;" class="color-swatch" title="Denim Blue"></label>
+  
+      <input type="radio" id="design-above-name-color-navy-blue" name="properties[ Design Above Name Color]" value="Navy Blue">
+      <label for="design-above-name-color-navy-blue" style="background-color: #000080;" class="color-swatch" title="Navy Blue"></label>
+  
+      <input type="radio" id="design-above-name-color-royal-blue" name="properties[ Design Above Name Color]" value="Royal Blue">
+      <label for="design-above-name-color-royal-blue" style="background-color: #4169E1;" class="color-swatch" title="Royal Blue"></label>
+  
+      <input type="radio" id="design-above-name-color-turquoise" name="properties[ Design Above Name Color]" value="Turquoise">
+      <label for="design-above-name-color-turquoise" style="background-color: #40E0D0;" class="color-swatch" title="Turquoise"></label>
+  
+      <input type="radio" id="design-above-name-color-lavender" name="properties[ Design Above Name Color]" value="Lavender">
+      <label for="design-above-name-color-lavender" style="background-color: #E6E6FA;" class="color-swatch" title="Lavender"></label>
+  
+      <input type="radio" id="design-above-name-color-purple" name="properties[ Design Above Name Color]" value="Purple">
+      <label for="design-above-name-color-purple" style="background-color: #800080;" class="color-swatch" title="Purple"></label>
+  
+      <input type="radio" id="design-above-name-color-hunter-green" name="properties[ Design Above Name Color]" value="Hunter Green">
+      <label for="design-above-name-color-hunter-green" style="background-color: #355E3B;" class="color-swatch" title="Hunter Green"></label>
+  
+      <input type="radio" id="design-above-name-color-kelly-green" name="properties[ Design Above Name Color]" value="Kelly Green">
+      <label for="design-above-name-color-kelly-green" style="background-color: #4CBB17;" class="color-swatch" title="Kelly Green"></label>
+  
+      <input type="radio" id="design-above-name-color-lime-green" name="properties[ Design Above Name Color]" value="Lime Green">
+      <label for="design-above-name-color-lime-green" style="background-color: #32CD32;" class="color-swatch" title="Lime Green"></label>
+  
+      <input type="radio" id="design-above-name-color-bright-yellow" name="properties[ Design Above Name Color]" value="Bright Yellow">
+      <label for="design-above-name-color-bright-yellow" style="background-color: #FFFF00;" class="color-swatch" title="Bright Yellow"></label>
+  
+      <input type="radio" id="design-above-name-color-orange" name="properties[ Design Above Name Color]" value="Orange">
+      <label for="design-above-name-color-orange" style="background-color: #FFA500;" class="color-swatch" title="Orange"></label>
+  
+      <input type="radio" id="design-above-name-color-red" name="properties[ Design Above Name Color]" value="Red">
+      <label for="design-above-name-color-red" style="background-color: #FF0000;" class="color-swatch" title="Red"></label>
+  
+      <input type="radio" id="design-above-name-color-gray" name="properties[ Design Above Name Color]" value="Gray">
+      <label for="design-above-name-color-gray" style="background-color: #808080;" class="color-swatch" title="Gray"></label>
+  
+      <input type="radio" id="design-above-name-color-silver" name="properties[ Design Above Name Color]" value="Silver">
+      <label for="design-above-name-color-silver" style="background-color: #C0C0C0;" class="color-swatch" title="Silver"></label>
+  
+      <input type="radio" id="design-above-name-color-light-brown" name="properties[ Design Above Name Color]" value="Light Brown">
+      <label for="design-above-name-color-light-brown" style="background-color: #A52A2A;" class="color-swatch" title="Light Brown"></label>
+  
+      <input type="radio" id="design-above-name-color-dark-brown" name="properties[ Design Above Name Color]" value="Dark Brown">
+      <label for="design-above-name-color-dark-brown" style="background-color: #5C4033;" class="color-swatch" title="Dark Brown"></label>
+  
+      <input type="radio" id="design-above-name-color-black" name="properties[ Design Above Name Color]" value="Black">
+      <label for="design-above-name-color-black" style="background-color: #000000;" class="color-swatch" title="Black"></label>
+    </div>
+
+    <!-- Add more colors as needed -->
+  </div>
+
+  <!-- Select Your Back Background Color -->
+  <label>Select Your Back Background Color:</label>
+  <div class="color-options">
+   <input type="radio" id="back-background-color-white" name="properties[ Back Background Color]" value="White" required>
+      <label for="back-background-color-white" style="background-color: #FFFFFF;" class="color-swatch" title="White"></label>
+  
+      <input type="radio" id="back-background-color-ecru" name="properties[ Back Background Color]" value="Ecru">
+      <label for="back-background-color-ecru" style="background-color: #F5F5DC;" class="color-swatch" title="Ecru"></label>
+  
+      <input type="radio" id="back-background-color-light-pink" name="properties[ Back Background Color]" value="Light Pink">
+      <label for="back-background-color-light-pink" style="background-color: #F9C4CF;" class="color-swatch" title="Light Pink"></label>
+  
+      <input type="radio" id="back-background-color-bright-pink" name="properties[ Back Background Color]" value="Bright Pink">
+      <label for="back-background-color-bright-pink" style="background-color: #FF69B4;" class="color-swatch" title="Bright Pink"></label>
+  
+      <input type="radio" id="back-background-color-fuchsia" name="properties[ Back Background Color]" value="Fuchsia">
+      <label for="back-background-color-fuchsia" style="background-color: #FF00FF;" class="color-swatch" title="Fuchsia"></label>
+  
+      <input type="radio" id="back-background-color-baby-blue" name="properties[ Back Background Color]" value="Baby Blue">
+      <label for="back-background-color-baby-blue" style="background-color: #89CFF0;" class="color-swatch" title="Baby Blue"></label>
+  
+      <input type="radio" id="back-background-color-denim-blue" name="properties[ Back Background Color]" value="Denim Blue">
+      <label for="back-background-color-denim-blue" style="background-color: #3F69AA;" class="color-swatch" title="Denim Blue"></label>
+  
+      <input type="radio" id="back-background-color-navy-blue" name="properties[ Back Background Color]" value="Navy Blue">
+      <label for="back-background-color-navy-blue" style="background-color: #000080;" class="color-swatch" title="Navy Blue"></label>
+  
+      <input type="radio" id="back-background-color-royal-blue" name="properties[ Back Background Color]" value="Royal Blue">
+      <label for="back-background-color-royal-blue" style="background-color: #4169E1;" class="color-swatch" title="Royal Blue"></label>
+  
+      <input type="radio" id="back-background-color-turquoise" name="properties[ Back Background Color]" value="Turquoise">
+      <label for="back-background-color-turquoise" style="background-color: #40E0D0;" class="color-swatch" title="Turquoise"></label>
+  
+      <input type="radio" id="back-background-color-lavender" name="properties[ Back Background Color]" value="Lavender">
+      <label for="back-background-color-lavender" style="background-color: #E6E6FA;" class="color-swatch" title="Lavender"></label>
+  
+      <input type="radio" id="back-background-color-purple" name="properties[ Back Background Color]" value="Purple">
+      <label for="back-background-color-purple" style="background-color: #800080;" class="color-swatch" title="Purple"></label>
+  
+      <input type="radio" id="back-background-color-hunter-green" name="properties[ Back Background Color]" value="Hunter Green">
+      <label for="back-background-color-hunter-green" style="background-color: #355E3B;" class="color-swatch" title="Hunter Green"></label>
+  
+      <input type="radio" id="back-background-color-kelly-green" name="properties[ Back Background Color]" value="Kelly Green">
+      <label for="back-background-color-kelly-green" style="background-color: #4CBB17;" class="color-swatch" title="Kelly Green"></label>
+  
+      <input type="radio" id="back-background-color-lime-green" name="properties[ Back Background Color]" value="Lime Green">
+      <label for="back-background-color-lime-green" style="background-color: #32CD32;" class="color-swatch" title="Lime Green"></label>
+  
+      <input type="radio" id="back-background-color-bright-yellow" name="properties[ Back Background Color]" value="Bright Yellow">
+      <label for="back-background-color-bright-yellow" style="background-color: #FFFF00;" class="color-swatch" title="Bright Yellow"></label>
+  
+      <input type="radio" id="back-background-color-orange" name="properties[ Back Background Color]" value="Orange">
+      <label for="back-background-color-orange" style="background-color: #FFA500;" class="color-swatch" title="Orange"></label>
+  
+      <input type="radio" id="back-background-color-red" name="properties[ Back Background Color]" value="Red">
+      <label for="back-background-color-red" style="background-color: #FF0000;" class="color-swatch" title="Red"></label>
+  
+      <input type="radio" id="back-background-color-gray" name="properties[ Back Background Color]" value="Gray">
+      <label for="back-background-color-gray" style="background-color: #808080;" class="color-swatch" title="Gray"></label>
+  
+      <input type="radio" id="back-background-color-silver" name="properties[ Back Background Color]" value="Silver">
+      <label for="back-background-color-silver" style="background-color: #C0C0C0;" class="color-swatch" title="Silver"></label>
+  
+      <input type="radio" id="back-background-color-light-brown" name="properties[ Back Background Color]" value="Light Brown">
+      <label for="back-background-color-light-brown" style="background-color: #A52A2A;" class="color-swatch" title="Light Brown"></label>
+  
+      <input type="radio" id="back-background-color-dark-brown" name="properties[ Back Background Color]" value="Dark Brown">
+      <label for="back-background-color-dark-brown" style="background-color: #5C4033;" class="color-swatch" title="Dark Brown"></label>
+  
+      <input type="radio" id="back-background-color-black" name="properties[ Back Background Color]" value="Black">
+      <label for="back-background-color-black" style="background-color: #000000;" class="color-swatch" title="Black"></label>
+    </div>
+
+    <!-- Add more colors as needed -->
+  </div>
+
+  <!-- Select the Design Color 1 -->
+  <label>Select the Design Color 1:</label>
+  <div class="color-options">
+   <input type="radio" id="design-color-1-white" name="properties[ Design Color 1]" value="White" required>
+      <label for="design-color-1-white" style="background-color: #FFFFFF;" class="color-swatch" title="White"></label>
+  
+      <input type="radio" id="design-color-1-ecru" name="properties[ Design Color 1]" value="Ecru">
+      <label for="design-color-1-ecru" style="background-color: #F5F5DC;" class="color-swatch" title="Ecru"></label>
+  
+      <input type="radio" id="design-color-1-light-pink" name="properties[ Design Color 1]" value="Light Pink">
+      <label for="design-color-1-light-pink" style="background-color: #F9C4CF;" class="color-swatch" title="Light Pink"></label>
+  
+      <input type="radio" id="design-color-1-bright-pink" name="properties[ Design Color 1]" value="Bright Pink">
+      <label for="design-color-1-bright-pink" style="background-color: #FF69B4;" class="color-swatch" title="Bright Pink"></label>
+  
+      <input type="radio" id="design-color-1-fuchsia" name="properties[ Design Color 1]" value="Fuchsia">
+      <label for="design-color-1-fuchsia" style="background-color: #FF00FF;" class="color-swatch" title="Fuchsia"></label>
+  
+      <input type="radio" id="design-color-1-baby-blue" name="properties[ Design Color 1]" value="Baby Blue">
+      <label for="design-color-1-baby-blue" style="background-color: #89CFF0;" class="color-swatch" title="Baby Blue"></label>
+  
+      <input type="radio" id="design-color-1-denim-blue" name="properties[ Design Color 1]" value="Denim Blue">
+      <label for="design-color-1-denim-blue" style="background-color: #3F69AA;" class="color-swatch" title="Denim Blue"></label>
+  
+      <input type="radio" id="design-color-1-navy-blue" name="properties[ Design Color 1]" value="Navy Blue">
+      <label for="design-color-1-navy-blue" style="background-color: #000080;" class="color-swatch" title="Navy Blue"></label>
+  
+      <input type="radio" id="design-color-1-royal-blue" name="properties[ Design Color 1]" value="Royal Blue">
+      <label for="design-color-1-royal-blue" style="background-color: #4169E1;" class="color-swatch" title="Royal Blue"></label>
+  
+      <input type="radio" id="design-color-1-turquoise" name="properties[ Design Color 1]" value="Turquoise">
+      <label for="design-color-1-turquoise" style="background-color: #40E0D0;" class="color-swatch" title="Turquoise"></label>
+  
+      <input type="radio" id="design-color-1-lavender" name="properties[ Design Color 1]" value="Lavender">
+      <label for="design-color-1-lavender" style="background-color: #E6E6FA;" class="color-swatch" title="Lavender"></label>
+  
+      <input type="radio" id="design-color-1-purple" name="properties[ Design Color 1]" value="Purple">
+      <label for="design-color-1-purple" style="background-color: #800080;" class="color-swatch" title="Purple"></label>
+  
+      <input type="radio" id="design-color-1-hunter-green" name="properties[ Design Color 1]" value="Hunter Green">
+      <label for="design-color-1-hunter-green" style="background-color: #355E3B;" class="color-swatch" title="Hunter Green"></label>
+  
+      <input type="radio" id="design-color-1-kelly-green" name="properties[ Design Color 1]" value="Kelly Green">
+      <label for="design-color-1-kelly-green" style="background-color: #4CBB17;" class="color-swatch" title="Kelly Green"></label>
+  
+      <input type="radio" id="design-color-1-lime-green" name="properties[ Design Color 1]" value="Lime Green">
+      <label for="design-color-1-lime-green" style="background-color: #32CD32;" class="color-swatch" title="Lime Green"></label>
+  
+      <input type="radio" id="design-color-1-bright-yellow" name="properties[ Design Color 1]" value="Bright Yellow">
+      <label for="design-color-1-bright-yellow" style="background-color: #FFFF00;" class="color-swatch" title="Bright Yellow"></label>
+  
+      <input type="radio" id="design-color-1-orange" name="properties[ Design Color 1]" value="Orange">
+      <label for="design-color-1-orange" style="background-color: #FFA500;" class="color-swatch" title="Orange"></label>
+  
+      <input type="radio" id="design-color-1-red" name="properties[ Design Color 1]" value="Red">
+      <label for="design-color-1-red" style="background-color: #FF0000;" class="color-swatch" title="Red"></label>
+  
+      <input type="radio" id="design-color-1-gray" name="properties[ Design Color 1]" value="Gray">
+      <label for="design-color-1-gray" style="background-color: #808080;" class="color-swatch" title="Gray"></label>
+  
+      <input type="radio" id="design-color-1-silver" name="properties[ Design Color 1]" value="Silver">
+      <label for="design-color-1-silver" style="background-color: #C0C0C0;" class="color-swatch" title="Silver"></label>
+  
+      <input type="radio" id="design-color-1-light-brown" name="properties[ Design Color 1]" value="Light Brown">
+      <label for="design-color-1-light-brown" style="background-color: #A52A2A;" class="color-swatch" title="Light Brown"></label>
+  
+      <input type="radio" id="design-color-1-dark-brown" name="properties[ Design Color 1]" value="Dark Brown">
+      <label for="design-color-1-dark-brown" style="background-color: #5C4033;" class="color-swatch" title="Dark Brown"></label>
+  
+      <input type="radio" id="design-color-1-black" name="properties[ Design Color 1]" value="Black">
+      <label for="design-color-1-black" style="background-color: #000000;" class="color-swatch" title="Black"></label>
+    </div>
+    <!-- Add more colors as needed -->
+  </div>
+
+  <!-- Select the Design Color 2 -->
+  <label>Select the Design Color 2:</label>
+  <div class="color-options">
+    <input type="radio" id=" design-color-2-white" name="properties[ Design Color 2]" value="White" required>
+      <label for=" design-color-2-white" style="background-color: #FFFFFF;" class="color-swatch" title="White"></label>
+  
+      <input type="radio" id=" design-color-2-ecru" name="properties[ Design Color 2]" value="Ecru">
+      <label for=" design-color-2-ecru" style="background-color: #F5F5DC;" class="color-swatch" title="Ecru"></label>
+  
+      <input type="radio" id=" design-color-2-light-pink" name="properties[ Design Color 2]" value="Light Pink">
+      <label for=" design-color-2-light-pink" style="background-color: #F9C4CF;" class="color-swatch" title="Light Pink"></label>
+  
+      <input type="radio" id=" design-color-2-bright-pink" name="properties[ Design Color 2]" value="Bright Pink">
+      <label for=" design-color-2-bright-pink" style="background-color: #FF69B4;" class="color-swatch" title="Bright Pink"></label>
+  
+      <input type="radio" id=" design-color-2-fuchsia" name="properties[ Design Color 2]" value="Fuchsia">
+      <label for=" design-color-2-fuchsia" style="background-color: #FF00FF;" class="color-swatch" title="Fuchsia"></label>
+  
+      <input type="radio" id=" design-color-2-baby-blue" name="properties[ Design Color 2]" value="Baby Blue">
+      <label for=" design-color-2-baby-blue" style="background-color: #89CFF0;" class="color-swatch" title="Baby Blue"></label>
+  
+      <input type="radio" id=" design-color-2-denim-blue" name="properties[ Design Color 2]" value="Denim Blue">
+      <label for=" design-color-2-denim-blue" style="background-color: #3F69AA;" class="color-swatch" title="Denim Blue"></label>
+  
+      <input type="radio" id=" design-color-2-navy-blue" name="properties[ Design Color 2]" value="Navy Blue">
+      <label for=" design-color-2-navy-blue" style="background-color: #000080;" class="color-swatch" title="Navy Blue"></label>
+  
+      <input type="radio" id=" design-color-2-royal-blue" name="properties[ Design Color 2]" value="Royal Blue">
+      <label for=" design-color-2-royal-blue" style="background-color: #4169E1;" class="color-swatch" title="Royal Blue"></label>
+  
+      <input type="radio" id=" design-color-2-turquoise" name="properties[ Design Color 2]" value="Turquoise">
+      <label for=" design-color-2-turquoise" style="background-color: #40E0D0;" class="color-swatch" title="Turquoise"></label>
+  
+      <input type="radio" id=" design-color-2-lavender" name="properties[ Design Color 2]" value="Lavender">
+      <label for=" design-color-2-lavender" style="background-color: #E6E6FA;" class="color-swatch" title="Lavender"></label>
+  
+      <input type="radio" id=" design-color-2-purple" name="properties[ Design Color 2]" value="Purple">
+      <label for=" design-color-2-purple" style="background-color: #800080;" class="color-swatch" title="Purple"></label>
+  
+      <input type="radio" id=" design-color-2-hunter-green" name="properties[ Design Color 2]" value="Hunter Green">
+      <label for=" design-color-2-hunter-green" style="background-color: #355E3B;" class="color-swatch" title="Hunter Green"></label>
+  
+      <input type="radio" id=" design-color-2-kelly-green" name="properties[ Design Color 2]" value="Kelly Green">
+      <label for=" design-color-2-kelly-green" style="background-color: #4CBB17;" class="color-swatch" title="Kelly Green"></label>
+  
+      <input type="radio" id=" design-color-2-lime-green" name="properties[ Design Color 2]" value="Lime Green">
+      <label for=" design-color-2-lime-green" style="background-color: #32CD32;" class="color-swatch" title="Lime Green"></label>
+  
+      <input type="radio" id=" design-color-2-bright-yellow" name="properties[ Design Color 2]" value="Bright Yellow">
+      <label for=" design-color-2-bright-yellow" style="background-color: #FFFF00;" class="color-swatch" title="Bright Yellow"></label>
+  
+      <input type="radio" id=" design-color-2-orange" name="properties[ Design Color 2]" value="Orange">
+      <label for=" design-color-2-orange" style="background-color: #FFA500;" class="color-swatch" title="Orange"></label>
+  
+      <input type="radio" id=" design-color-2-red" name="properties[ Design Color 2]" value="Red">
+      <label for=" design-color-2-red" style="background-color: #FF0000;" class="color-swatch" title="Red"></label>
+  
+      <input type="radio" id=" design-color-2-gray" name="properties[ Design Color 2]" value="Gray">
+      <label for=" design-color-2-gray" style="background-color: #808080;" class="color-swatch" title="Gray"></label>
+  
+      <input type="radio" id=" design-color-2-silver" name="properties[ Design Color 2]" value="Silver">
+      <label for=" design-color-2-silver" style="background-color: #C0C0C0;" class="color-swatch" title="Silver"></label>
+  
+      <input type="radio" id=" design-color-2-light-brown" name="properties[ Design Color 2]" value="Light Brown">
+      <label for=" design-color-2-light-brown" style="background-color: #A52A2A;" class="color-swatch" title="Light Brown"></label>
+  
+      <input type="radio" id=" design-color-2-dark-brown" name="properties[ Design Color 2]" value="Dark Brown">
+      <label for=" design-color-2-dark-brown" style="background-color: #5C4033;" class="color-swatch" title="Dark Brown"></label>
+  
+      <input type="radio" id=" design-color-2-black" name="properties[ Design Color 2]" value="Black">
+      <label for=" design-color-2-black" style="background-color: #000000;" class="color-swatch" title="Black"></label>
+    </div>
+    <!-- Add more colors as needed -->
+  </div>
+
+  <!-- Additional Instructions -->
+  <label for="additional-instructions">Additional Instructions:</label>
+  <textarea id="additional-instructions" name="properties[Additional Instructions]" rows="3" placeholder="Enter any additional instructions"></textarea>
+
+  <!-- Drop Ship to This Address with Gift Message -->
+  <label for="gift-message">Drop Ship to This Address with Gift Message:</label>
+  <textarea id="gift-message" name="properties[Gift Message]" rows="3" placeholder="Enter gift message and address"></textarea>
+</div>
+
+<!-- Styles for Color Swatch and Tooltip -->
+<style>
+  .product-options {
+    margin-bottom: 20px;
+  }
+
+  .product-options label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+  }
+
+  .color-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+
+  .color-options input[type="radio"] {
+    display: none; /* Hide radio buttons */
+  }
+
+  .color-swatch {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #ddd;
+  }
+
+  /* Show tooltip on hover */
+  .color-swatch:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  /* Highlight selected color swatch */
+  .color-options input[type="radio"]:checked + .color-swatch {
+    border: 2px solid #333;
+  }
+
+  input[type="text"], select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+</style>
+</form>
